@@ -4,6 +4,7 @@
 #include "DawgHop.h"
 int main()
 {
+  //make copy constructors deep
   std::ifstream inputFile("deck.txt");
 
   if (!inputFile.is_open())

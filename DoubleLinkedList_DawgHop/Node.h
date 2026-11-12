@@ -12,8 +12,7 @@ public:
   Node(Card data);
   ~Node();
   Card getValue();
-  void setValue(Card data);
-  Card getData();
+  void setValue(Card value);
 
 private:
   Card data_;

@@ -20,12 +20,7 @@ Card Node::getValue()
   return data_;
 }
 
-void Node::setValue(Card data)
+void Node::setValue(Card value)
 {
-  data_ = data;
-}
-
-Card Node::getData()
-{
-  return data_;
+  data_ = value;
 }
