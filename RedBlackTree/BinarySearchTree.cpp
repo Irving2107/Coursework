@@ -78,6 +78,30 @@ void BinarySearchTree::inorderTraversal(TreeNode *node)
   inorderTraversal(node->getRightChild());
 }
 
+void BinarySearchTree::preorderTraversal(TreeNode *node)
+{
+  if (node == nullptr)
+  {
+    return;
+  }
+
+  std::cout << node->getValue() << " ";
+  preorderTraversal(node->getLeftChild());
+  preorderTraversal(node->getRightChild());
+}
+
+void BinarySearchTree::postorderTraversal(TreeNode *node)
+{
+  if (node == nullptr)
+  {
+    return;
+  }
+
+  postorderTraversal(node->getLeftChild());
+  postorderTraversal(node->getRightChild());
+  std::cout << node->getValue() << " ";
+}
+
 int BinarySearchTree::getHeight() const
 {
   return getHeight(root_);

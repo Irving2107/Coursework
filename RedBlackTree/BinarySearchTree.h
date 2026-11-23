@@ -19,6 +19,8 @@ public:
   int getHeight() const;
   void deleteNode(int data);
   void inorderTraversal(TreeNode *node);
+  void preorderTraversal(TreeNode *node);
+  void postorderTraversal(TreeNode *node);
 
 private:
   TreeNode *insertNode(TreeNode *root, TreeNode *node); // root is a root of A tree, not THE tree necessarily

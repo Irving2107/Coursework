@@ -12,6 +12,9 @@ public:
   virtual ~RedBlackTree();
   virtual void insert(int data);
 
+  void printRedNodes(TreeNode *root);
+  void printBlackNodes(TreeNode *root);
+
 private:
   void rotateLeft(TreeNode *&root, TreeNode *&newNode);
   void rotateRight(TreeNode *&root, TreeNode *&newNode);

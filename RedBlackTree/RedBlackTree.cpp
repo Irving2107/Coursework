@@ -194,3 +194,33 @@ void RedBlackTree::balanceColor(TreeNode *&root, TreeNode *&newNode)
     root->setColor(BLACK);
   }
 }
+
+void RedBlackTree::printRedNodes(TreeNode *root)
+{
+  if (root == nullptr)
+  {
+    return;
+  }
+
+  printRedNodes(root->getLeftChild());
+  if (root->getColor() == RED)
+  {
+    std::cout << root->getValue() << " ";
+  }
+  printRedNodes(root->getRightChild());
+}
+
+void RedBlackTree::printBlackNodes(TreeNode *root)
+{
+  if (root == nullptr)
+  {
+    return;
+  }
+
+  if (root->getColor() == BLACK)
+  {
+    std::cout << root->getValue() << " ";
+  }
+  printBlackNodes(root->getLeftChild());
+  printBlackNodes(root->getRightChild());
+}
