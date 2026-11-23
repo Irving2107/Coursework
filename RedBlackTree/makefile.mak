@@ -1,8 +1,8 @@
 # Honor Pledge : I pledge that I have neither given nor received any help on this assignment.
 # iluisorozco
 
-RBT.exe: Driver.o Node.o TreeNode.o BinarySearchTree.o
-	g++ Driver.o Node.o TreeNode.o BinarySearchTree.o -o RBT.exe
+RBT.exe: Driver.o Node.o TreeNode.o BinarySearchTree.o RedBlackTree.o
+	g++ Driver.o Node.o TreeNode.o BinarySearchTree.o RedBlackTree.o -o RBT.exe
 
 Driver.o: driver.cpp
 	g++ -c driver.cpp -o Driver.o
@@ -15,6 +15,9 @@ TreeNode.o: TreeNode.cpp
 
 BinarySearchTree.o: BinarySearchTree.cpp
 	g++ -c BinarySearchTree.cpp -o BinarySearchTree.o
+
+RedBlackTree.o: RedBlackTree.cpp
+	g++ -c RedBlackTree.cpp -o RedBlackTree.o
 
 clean:
 	rm -f *.o RBT.exe

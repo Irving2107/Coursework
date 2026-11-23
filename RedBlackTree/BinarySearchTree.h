@@ -9,22 +9,22 @@ class BinarySearchTree : public TreeNode
 {
 public:
   BinarySearchTree();
-  // BinarySearchTree &operator=(const BinarySearchTree &other);
   BinarySearchTree(const BinarySearchTree &other);
   ~BinarySearchTree();
 
-  void insert(int data);
+  virtual void insert(int data);
   void print();
-
   void setRoot(TreeNode *root);
   TreeNode *getRoot() const;
   int getHeight() const;
+  void deleteNode(int data);
+  void inorderTraversal(TreeNode *node);
 
 private:
   TreeNode *insertNode(TreeNode *root, TreeNode *node); // root is a root of A tree, not THE tree necessarily
-  void inorderTraversal(TreeNode *node);
   TreeNode *root_;
   int getHeight(TreeNode *node) const;
+  TreeNode *deleteTreeNode(TreeNode *root, int data);
 };
 
 #endif

@@ -5,6 +5,12 @@
 
 #include "Node.h"
 
+enum Color
+{
+  RED,
+  BLACK
+};
+
 class TreeNode : public Node
 {
 public:
@@ -21,9 +27,13 @@ public:
   TreeNode *getRightChild() const;
   TreeNode *getParent() const;
 
+  void setColor(Color color);
+  Color getColor() const;
+
 private:
   TreeNode *leftChild_;
   TreeNode *rightChild_;
   TreeNode *parent_;
+  Color color_;
 };
 #endif

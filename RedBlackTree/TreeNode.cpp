@@ -5,9 +5,9 @@
 
 TreeNode::TreeNode() : TreeNode(0) {}
 
-TreeNode::TreeNode(int data) : Node(data), leftChild_(nullptr), rightChild_(nullptr), parent_(nullptr) {}
+TreeNode::TreeNode(int data) : Node(data), leftChild_(nullptr), rightChild_(nullptr), parent_(nullptr), color_(RED) {}
 
-TreeNode::TreeNode(const TreeNode &other) : Node(other.getValue()), leftChild_(nullptr), rightChild_(nullptr), parent_(nullptr)
+TreeNode::TreeNode(const TreeNode &other) : Node(other.getValue()), leftChild_(nullptr), rightChild_(nullptr), parent_(nullptr), color_(other.color_)
 {
   if (other.leftChild_ != nullptr)
   {
@@ -68,4 +68,14 @@ TreeNode *TreeNode::getRightChild() const
 TreeNode *TreeNode::getParent() const
 {
   return parent_;
+}
+
+void TreeNode::setColor(Color color)
+{
+  color_ = color;
+}
+
+Color TreeNode::getColor() const
+{
+  return color_;
 }
