@@ -13,6 +13,8 @@ public:
   virtual void insert(int data);
 
 private:
-  // TreeNode *insertNode(TreeNode *root, TreeNode *newNode);
+  void rotateLeft(TreeNode *&root, TreeNode *&newNode);
+  void rotateRight(TreeNode *&root, TreeNode *&newNode);
+  void balanceColor(TreeNode *&root, TreeNode *&newNode);
 };
 #endif
